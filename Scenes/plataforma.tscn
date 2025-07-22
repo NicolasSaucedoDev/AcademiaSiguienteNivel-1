@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://w7cw0f26qag2"]
+
+[ext_resource type="Texture2D" uid="uid://od3lg6qodods" path="res://Assets/Plataformas/tablalarga.png" id="1_fy0c4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wekxh"]
+size = Vector2(182, 12)
+
+[node name="Plataforma" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 0)
+scale = Vector2(0.0977788, 0.109574)
+texture = ExtResource("1_fy0c4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("RectangleShape2D_wekxh")

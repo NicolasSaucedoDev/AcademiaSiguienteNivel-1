@@ -1,0 +1,374 @@
+[gd_scene load_steps=26 format=3 uid="uid://c2emkmhw2of0f"]
+
+[ext_resource type="Script" uid="uid://3ngjphjd6qmm" path="res://Script/pause_menu.gd" id="1_ghash"]
+[ext_resource type="Shader" uid="uid://dosalyj7udp1c" path="res://Script/shader.gdshader" id="1_pnnxv"]
+[ext_resource type="Texture2D" uid="uid://cn3lgeusb84o4" path="res://Assets/Diseño/MENU PAUSA 2-02.png" id="3_8jtsu"]
+[ext_resource type="Texture2D" uid="uid://xvmyyrhbvp1e" path="res://Assets/Diseño/comenzarsalir sn.png" id="4_1d3v7"]
+[ext_resource type="FontFile" uid="uid://b6i34ku0fvv0o" path="res://Assets/fonts/Dosis-Bold.otf" id="5_w1jse"]
+[ext_resource type="Texture2D" uid="uid://cgcwxhm5ngn6g" path="res://Assets/Diseño/PAJARO1.png" id="6_ia137"]
+[ext_resource type="Texture2D" uid="uid://ctk5vffr7uemq" path="res://Assets/Diseño/PAJARO2.png" id="7_j4802"]
+[ext_resource type="Texture2D" uid="uid://b2mtg8nb5bwf7" path="res://Assets/Diseño/PAJARO3.png" id="8_fdr6j"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mjt4u"]
+shader = ExtResource("1_pnnxv")
+shader_parameter/lod = 0.0
+
+[sub_resource type="Theme" id="Theme_135sp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fsa8n"]
+texture = ExtResource("3_8jtsu")
+region_rect = Rect2(104.181, 58.9003, 1891.45, 2229.42)
+
+[sub_resource type="FontVariation" id="FontVariation_lq57p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3p1aq"]
+texture = ExtResource("4_1d3v7")
+modulate_color = Color(0.836007, 0.836006, 7.70092e-07, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ao2kx"]
+texture = ExtResource("4_1d3v7")
+region_rect = Rect2(0, 0, 975.113, 218)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a0kch"]
+texture = ExtResource("4_1d3v7")
+modulate_color = Color(0.705113, 0.705113, 0, 1)
+
+[sub_resource type="Theme" id="Theme_c0866"]
+Button/colors/font_focus_color = Color(0.813927, 0.813927, 0, 1)
+Button/fonts/font = SubResource("FontVariation_lq57p")
+Button/styles/hover = SubResource("StyleBoxTexture_3p1aq")
+Button/styles/normal = SubResource("StyleBoxTexture_ao2kx")
+Button/styles/pressed = SubResource("StyleBoxTexture_a0kch")
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_jqbgp"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_2b0gh"]
+events = [SubResource("InputEventJoypadButton_jqbgp")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_it6ad"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_p0xq3"]
+events = [SubResource("InputEventJoypadButton_it6ad")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_llumb"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_24hkt"]
+events = [SubResource("InputEventJoypadButton_llumb")]
+
+[sub_resource type="Animation" id="Animation_fpy37"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Resume:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Restart:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Exit_game:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pajaro1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pajaro2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pajero3:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_g7tex"]
+resource_name = "blur"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/lod")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("PanelContainer:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Resume:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Restart:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Exit_game:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pajaro1:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pajaro2:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pajero3:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gb3yh"]
+_data = {
+&"RESET": SubResource("Animation_fpy37"),
+&"blur": SubResource("Animation_g7tex")
+}
+
+[node name="Pause_Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ghash")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+process_mode = 3
+material = SubResource("ShaderMaterial_mjt4u")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.0
+offset_right = 261.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme = SubResource("Theme_135sp")
+theme_override_styles/panel = SubResource("StyleBoxTexture_fsa8n")
+
+[node name="Resume" type="Button" parent="." node_paths=PackedStringArray("shortcut_context")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 401.0
+offset_top = 209.0
+offset_right = 767.0
+offset_bottom = 273.0
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_c0866")
+theme_override_fonts/font = ExtResource("5_w1jse")
+theme_override_font_sizes/font_size = 36
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_2b0gh")
+text = "CONTINUAR"
+
+[node name="Restart" type="Button" parent="." node_paths=PackedStringArray("shortcut_context")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 399.0
+offset_top = 332.0
+offset_right = 765.0
+offset_bottom = 394.0
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_c0866")
+theme_override_fonts/font = ExtResource("5_w1jse")
+theme_override_font_sizes/font_size = 36
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_p0xq3")
+text = "REINTENTAR"
+
+[node name="Exit_game" type="Button" parent="." node_paths=PackedStringArray("shortcut_context")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 399.0
+offset_top = 449.0
+offset_right = 765.0
+offset_bottom = 512.0
+shortcut_context = NodePath(".")
+theme = SubResource("Theme_c0866")
+theme_override_fonts/font = ExtResource("5_w1jse")
+theme_override_font_sizes/font_size = 36
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_24hkt")
+text = "SALIR"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_gb3yh")
+}
+
+[node name="Pajaro1" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(409, 209)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_ia137")
+
+[node name="Pajaro2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(782, 303)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("7_j4802")
+
+[node name="Pajero3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(417, 422)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_fdr6j")
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Exit_game" to="." method="_on_exit_game_pressed"]

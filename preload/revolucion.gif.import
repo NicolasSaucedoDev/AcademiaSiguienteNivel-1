@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://bex02ntmuj4j"
+path="res://.godot/imported/revolucion.gif-66985e95ecd11c3b2ebbac38d4d2c95d.tres"
+
+[deps]
+
+source_file="res://preload/revolucion.gif"
+dest_files=["res://.godot/imported/revolucion.gif-66985e95ecd11c3b2ebbac38d4d2c95d.tres"]
+
+[params]
+
+frames_per_second=30

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://i4amqpsd20b4"]
+
+[ext_resource type="Script" uid="uid://doq6sdh4vjo4w" path="res://Script/comentario_2_lvl_2.gd" id="1_omkc6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n0lfk"]
+radius = 102.044
+
+[node name="Comentario-2-lvl2" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_omkc6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_n0lfk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

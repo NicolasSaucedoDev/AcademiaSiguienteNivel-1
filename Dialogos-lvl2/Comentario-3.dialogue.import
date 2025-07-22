@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bffk70mgeg61q"
+path="res://.godot/imported/Comentario-3.dialogue-b61198bfb81ab171ed79ba8629a69d88.tres"
+
+[deps]
+
+source_file="res://Dialogos-lvl2/Comentario-3.dialogue"
+dest_files=["res://.godot/imported/Comentario-3.dialogue-b61198bfb81ab171ed79ba8629a69d88.tres"]
+
+[params]
+
+defaults=true

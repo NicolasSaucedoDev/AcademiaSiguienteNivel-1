@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://o365mfpjtgul"]
+
+[ext_resource type="Script" uid="uid://ukhc6uedo71b" path="res://Script/comentario_4_lvl_2.gd" id="1_j0ujo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2nj5g"]
+radius = 86.0
+
+[node name="Comentario-4-lvl2" type="Area2D"]
+script = ExtResource("1_j0ujo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2nj5g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

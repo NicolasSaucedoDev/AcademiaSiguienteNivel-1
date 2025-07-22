@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://gayxeljltn6v"]
+
+[ext_resource type="Script" uid="uid://disxuyyk3djjd" path="res://Script/dialogo_de_inicio.gd" id="1_rqdau"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vqkxd"]
+radius = 112.004
+
+[node name="Dialogo-de-inicio" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_rqdau")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vqkxd")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

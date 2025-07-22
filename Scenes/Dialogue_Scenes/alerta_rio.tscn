@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ldbdtgtapqp4"]
+
+[ext_resource type="Script" uid="uid://b41mw74cmh18i" path="res://Script/alerta_rio.gd" id="1_nc6bt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8dhom"]
+radius = 75.1066
+
+[node name="Alerta-Rio" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_nc6bt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8dhom")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

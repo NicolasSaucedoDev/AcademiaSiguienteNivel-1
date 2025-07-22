@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://s4f0ldpkagnl"]
+
+[ext_resource type="Script" uid="uid://diub4phoq8ym8" path="res://addons/area_of_sight_2d/area_of_sight_agent_2d.gd" id="1_s0q4d"]
+[ext_resource type="Script" uid="uid://cog666x65t8sg" path="res://addons/area_of_sight_2d/area_of_sight_2d.gd" id="2_35t6m"]
+
+[sub_resource type="Gradient" id="Gradient_p8mv5"]
+interpolation_mode = 2
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_j6bxv"]
+gradient = SubResource("Gradient_p8mv5")
+fill = 1
+fill_from = Vector2(0, 0.179487)
+fill_to = Vector2(0.970085, 1)
+metadata/_snap_count = 2
+
+[node name="AreaOfSightAgent2D" type="Area2D"]
+visible = false
+position = Vector2(-7.20889, -122.771)
+script = ExtResource("1_s0q4d")
+
+[node name="AreaOfSight2D" type="Node2D" parent="."]
+position = Vector2(30.2089, -3.22922)
+script = ExtResource("2_35t6m")
+radius = 1000
+obstacle_mask = 15
+area_color = Color(1, 1, 1, 0.0941176)
+area_texture = SubResource("GradientTexture2D_j6bxv")
+edge_color = Color(0, 0, 0, 1)
+edge_width = 0.0

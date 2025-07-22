@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://dgi8f0ai67xr1"
+path="res://.godot/imported/revolucion-digital-d86529618f87c5a2e493fcd21b9a6820d222620553d0d62000ea072cbb7ac9c4.gif-52c224d8841d5b82ad894ba3fa06d90e.tres"
+
+[deps]
+
+source_file="res://Assets/Diseño/revolucion-digital-d86529618f87c5a2e493fcd21b9a6820d222620553d0d62000ea072cbb7ac9c4.gif"
+dest_files=["res://.godot/imported/revolucion-digital-d86529618f87c5a2e493fcd21b9a6820d222620553d0d62000ea072cbb7ac9c4.gif-52c224d8841d5b82ad894ba3fa06d90e.tres"]
+
+[params]
+
+frames_per_second=30

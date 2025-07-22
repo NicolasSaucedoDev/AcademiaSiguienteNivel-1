@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bda0gx1komx2a"
+path="res://.godot/imported/Fallo 1 - Comentario.dialogue-becb1f10fcef44eabcd9c9d4fa88f27f.tres"
+
+[deps]
+
+source_file="res://Dialogos/Fallo 1 - Comentario.dialogue"
+dest_files=["res://.godot/imported/Fallo 1 - Comentario.dialogue-becb1f10fcef44eabcd9c9d4fa88f27f.tres"]
+
+[params]
+
+defaults=true

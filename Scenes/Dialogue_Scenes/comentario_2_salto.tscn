@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dal4ykh7soe7s"]
+
+[ext_resource type="Script" uid="uid://drf71dvmeha7n" path="res://Script/comentario_2_salto.gd" id="1_iyr7r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6dy0v"]
+radius = 74.0
+
+[node name="Comentario-2-salto" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_iyr7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_6dy0v")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

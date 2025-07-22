@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://csgrrfo4whpwq"
+path="res://.godot/imported/Alerta-Rio.dialogue-ea1ade28b5940efa2f4bcc1c065c98f4.tres"
+
+[deps]
+
+source_file="res://Dialogos/Alerta-Rio.dialogue"
+dest_files=["res://.godot/imported/Alerta-Rio.dialogue-ea1ade28b5940efa2f4bcc1c065c98f4.tres"]
+
+[params]
+
+defaults=true

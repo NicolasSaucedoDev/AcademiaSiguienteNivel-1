@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://c5lxypctfju1c"
+path="res://.godot/imported/Comentario-5.dialogue-f7803200f00bbc506c5c47447bc48120.tres"
+
+[deps]
+
+source_file="res://Dialogos-lvl2/Comentario-5.dialogue"
+dest_files=["res://.godot/imported/Comentario-5.dialogue-f7803200f00bbc506c5c47447bc48120.tres"]
+
+[params]
+
+defaults=true

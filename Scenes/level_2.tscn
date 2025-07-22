@@ -1,0 +1,449 @@
+[gd_scene load_steps=33 format=4 uid="uid://br6wmv85ifx62"]
+
+[ext_resource type="Texture2D" uid="uid://cbk3g8r6fpjtm" path="res://Assets/TileMap/pastopiso.png" id="1_3f6hl"]
+[ext_resource type="Texture2D" uid="uid://cvca7qeidnmkl" path="res://Assets/Fondo-Piso-cielo/cielo.png" id="2_5ibv0"]
+[ext_resource type="Texture2D" uid="uid://025w23x06ngp" path="res://Assets/TileMap/AGUALINEALNUEVA.png" id="2_cnytt"]
+[ext_resource type="Texture2D" uid="uid://cwjgvmqt82b8g" path="res://Assets/Fondo-Piso-cielo/pastofondo2.png" id="3_bds4w"]
+[ext_resource type="Texture2D" uid="uid://jvx67kuk07f" path="res://Assets/Fondo-Piso-cielo/pastofondo1.png" id="4_birbf"]
+[ext_resource type="Texture2D" uid="uid://djm770g38kobr" path="res://Assets/TileMap/ARBOLESCEIBOYTOTEMS.png" id="5_pfvlw"]
+[ext_resource type="PackedScene" uid="uid://ctve3is0fbs85" path="res://Scenes/player.tscn" id="6_7nugv"]
+[ext_resource type="Texture2D" uid="uid://djvv37hoo5y8" path="res://Assets/TileMap/pastoplanoabajo.png" id="6_y5ilw"]
+[ext_resource type="PackedScene" uid="uid://cuj1bi0j8vcrw" path="res://Scenes/killzone.tscn" id="9_mc2n5"]
+[ext_resource type="PackedScene" uid="uid://s4f0ldpkagnl" path="res://Scenes/area_of_sight_agent_2d.tscn" id="9_ycyqt"]
+[ext_resource type="PackedScene" uid="uid://07xvf25kavmx" path="res://Scenes/hud___game_manager.tscn" id="10_32ydk"]
+[ext_resource type="PackedScene" uid="uid://c2emkmhw2of0f" path="res://Scenes/pause_menu.tscn" id="11_jv0te"]
+[ext_resource type="PackedScene" uid="uid://b35m7gbqs4qpt" path="res://Scenes/eco_ficha.tscn" id="12_04xp0"]
+[ext_resource type="PackedScene" uid="uid://w7cw0f26qag2" path="res://Scenes/plataforma.tscn" id="13_f4mcg"]
+[ext_resource type="Texture2D" uid="uid://b7ckecp1m7of3" path="res://Assets/Diseño/uipack_rpg_sheet.png" id="14_s4jkk"]
+[ext_resource type="PackedScene" uid="uid://dqn416txc2nq3" path="res://Scenes/enemy.tscn" id="14_v4gn0"]
+[ext_resource type="FontFile" uid="uid://b6i34ku0fvv0o" path="res://Assets/fonts/Dosis-Bold.otf" id="15_5acgx"]
+[ext_resource type="FontFile" uid="uid://bx12juymqvp26" path="res://Assets/fonts/PixelOperator8.ttf" id="15_eu6hk"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fam86"]
+texture = ExtResource("2_cnytt")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_77x38"]
+texture = ExtResource("1_3f6hl")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+11:0/0 = 0
+11:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+12:0/0 = 0
+12:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+13:0/0 = 0
+13:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+14:0/0 = 0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+15:0/0 = 0
+15:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, 15, 32, 15.5, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_ketl0"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_fam86")
+sources/1 = SubResource("TileSetAtlasSource_77x38")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ve4wq"]
+size = Vector2(25, 349)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ucvvj"]
+distance = 12.0
+
+[sub_resource type="Animation" id="Animation_rey3t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(923, -108)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rio Largo/Plataforma2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3094, -108)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rio Largo/Plataforma3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5317, -137)]
+}
+
+[sub_resource type="Animation" id="Animation_3626w"]
+resource_name = "move"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Plataforma:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(923, -108), Vector2(1671, -108)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Rio Largo/Plataforma2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1, 2.46667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3094, -108), Vector2(4122, -108)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Rio Largo/Plataforma3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(5317, -137), Vector2(6702, -137)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_olts8"]
+_data = {
+&"RESET": SubResource("Animation_rey3t"),
+&"move": SubResource("Animation_3626w")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_sssuk"]
+font = ExtResource("15_5acgx")
+font_size = 30
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wemu2"]
+texture = ExtResource("14_s4jkk")
+expand_margin_left = 15.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+region_rect = Rect2(-0.0285559, 97.9761, 189.974, 44.8193)
+
+[sub_resource type="Theme" id="Theme_nv43g"]
+Label/styles/normal = SubResource("StyleBoxTexture_wemu2")
+
+[sub_resource type="Animation" id="Animation_nb7hd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_trfgf"]
+resource_name = "mensaje"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(2, 3.5, 5, 6.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 5.03333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_11xp4"]
+_data = {
+&"RESET": SubResource("Animation_nb7hd"),
+&"mensaje": SubResource("Animation_trfgf")
+}
+
+[node name="level-2" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+modulate = Color(0.0117647, 0.196078, 0.843137, 1)
+z_index = 5
+tile_map_data = PackedByteArray("AAD4////AQAAAAAAAAD5////AQABAAAAAAD6////AQACAAAAAAD7////AQADAAAAAAD8////AQAEAAAAAAD9////AQAFAAAAAAD+////AQAGAAAAAAD/////AQAHAAAAAAAAAP//AQAIAAAAAAABAP//AQAJAAAAAAACAP//AQAKAAAAAAADAP//AQALAAAAAAAEAP//AQAMAAAAAAAFAP//AQANAAAAAAAGAP//AQAOAAAAAAAHAP//AQAPAAAAAAAIAP//AQAAAAAAAAAJAP//AQABAAAAAAAKAP//AQACAAAAAAALAP//AAAAAAAAAAAMAP//AAABAAAAAAANAP//AAACAAAAAAAOAP//AAADAAAAAAAPAP//AAADAAAAAAAQAP//AAAEAAAAAAARAP//AAAFAAAAAAASAP//AAAGAAAAAAATAP//AAADAAAAAAAUAP//AAAEAAAAAAAVAP//AAAFAAAAAAAWAP//AAAGAAAAAAAXAP//AAADAAAAAAAYAP//AAADAAAAAAAZAP//AAAEAAAAAAAaAP//AAAFAAAAAAAbAP//AAAGAAAAAAAcAP//AAAFAAAAAAAdAP//AAAHAAAAAAAeAP//AQABAAAAAAAfAP//AQACAAAAAAAgAP//AQADAAAAAAAhAP//AQADAAAAAAAiAP//AQAEAAAAAAAjAP//AQAFAAAAAAAkAP//AQAGAAAAAAAlAP//AQAHAAAAAAAmAP//AQAIAAAAAAAnAP//AQAJAAAAAAAoAP//AQAKAAAAAAApAP//AQALAAAAAAAqAP//AQAMAAAAAAArAP//AQANAAAAAAAsAP//AQAOAAAAAAAtAP//AQAPAAAAAAAuAP//AAAAAAAAAAAvAP//AAABAAAAAAAwAP//AAACAAAAAAAxAP//AAADAAAAAAAyAP//AAAEAAAAAAAzAP//AAAFAAAAAAA0AP//AAACAAAAAAA1AP//AAADAAAAAAA2AP//AAAEAAAAAAA3AP//AAAFAAAAAAA4AP//AAACAAAAAAA5AP//AAADAAAAAAA6AP//AAAEAAAAAAA7AP//AAAFAAAAAAA8AP//AAACAAAAAAA9AP//AAADAAAAAAA+AP//AAACAAAAAAA/AP//AAADAAAAAABAAP//AAAEAAAAAABBAP//AAAGAAAAAABCAP//AAAHAAAAAABDAP//AQALAAAAAABEAP//AQAMAAAAAABFAP//AQANAAAAAABGAP//AAAAAAAAAABHAP//AAABAAAAAABIAP//AAAFAAAAAABJAP//AAAGAAAAAABKAP//AAAHAAAAAABLAP//AQADAAAAAABMAP//AQAEAAAAAABNAP//AQAFAAAAAABOAP//AQAGAAAAAABPAP//AQAHAAAAAABQAP//AAAAAAAAAABRAP//AAABAAAAAABSAP//AAACAAAAAABTAP//AAADAAAAAABUAP//AAAEAAAAAABVAP//AAAFAAAAAABWAP//AAAGAAAAAABXAP//AAADAAAAAABYAP//AAAEAAAAAABZAP//AAAFAAAAAABaAP//AAAGAAAAAABbAP//AAADAAAAAABcAP//AAAEAAAAAABdAP//AAAFAAAAAABeAP//AAAGAAAAAABfAP//AAADAAAAAABgAP//AAAEAAAAAABhAP//AAAFAAAAAABiAP//AAAGAAAAAABjAP//AAADAAAAAABkAP//AAAEAAAAAABlAP//AAAFAAAAAABmAP//AAADAAAAAABnAP//AAAEAAAAAABoAP//AAAFAAAAAABpAP//AAAGAAAAAABqAP//AAAHAAAAAABrAP//AQADAAAAAABsAP//AQAEAAAAAABtAP//AQAFAAAAAABuAP//AQAGAAAAAABvAP//AQAHAAAAAABwAP//AQAIAAAAAABxAP//AQAJAAAAAAByAP//AQAKAAAAAABzAP//AQALAAAAAAB0AP//AQAMAAAAAAB1AP//AQANAAAAAAB2AP//AQAOAAAAAAB3AP//AQAPAAAAAAB4AP//AQAAAAAAAAB5AP//AQABAAAAAAB6AP//AQACAAAAAAB7AP//AQADAAAAAAB8AP//AQAEAAAAAAB9AP//AQAFAAAAAAB+AP//AQAGAAAAAAB/AP//AQAHAAAAAACAAP//AQAIAAAAAACBAP//AQAJAAAAAACCAP//AQAKAAAAAACDAP//AQALAAAAAACEAP//AQAMAAAAAACFAP//AQANAAAAAACGAP//AQAOAAAAAACHAP//AQAPAAAAAAA=")
+tile_set = SubResource("TileSet_ketl0")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sky" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0, 0, 0.278431, 1)
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(4105, 0)
+
+[node name="Cielo" type="Sprite2D" parent="ParallaxBackground/Sky"]
+position = Vector2(1593, -595)
+scale = Vector2(1, 1.38313)
+texture = ExtResource("2_5ibv0")
+
+[node name="Fondo-2" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.00392157, 0.12549, 0.596078, 1)
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(4105, 0)
+
+[node name="Pastofondo2" type="Sprite2D" parent="ParallaxBackground/Fondo-2"]
+position = Vector2(1597, -186)
+texture = ExtResource("3_bds4w")
+
+[node name="Fondo-1" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color(0.00784314, 0.160784, 0.72549, 1)
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(4105, 0)
+
+[node name="Pastofondo1" type="Sprite2D" parent="ParallaxBackground/Fondo-1"]
+position = Vector2(1589, -164)
+texture = ExtResource("4_birbf")
+
+[node name="Extra-Tiles" type="Node" parent="."]
+
+[node name="Arbol-Inicio" type="StaticBody2D" parent="Extra-Tiles"]
+modulate = Color(0.0117647, 0.196078, 0.843137, 1)
+z_index = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Extra-Tiles/Arbol-Inicio"]
+position = Vector2(67, -233)
+scale = Vector2(1.80682, 1.80871)
+texture = ExtResource("5_pfvlw")
+region_enabled = true
+region_rect = Rect2(554.3, 1.70001, 220, 264)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Extra-Tiles/Arbol-Inicio"]
+position = Vector2(51, -175)
+shape = SubResource("RectangleShape2D_ve4wq")
+
+[node name="Pastoplanoabajo" type="Sprite2D" parent="Extra-Tiles"]
+modulate = Color(0.0117647, 0.196078, 0.843137, 1)
+z_index = 5
+position = Vector2(3645.25, 248.25)
+scale = Vector2(2.00134, 1.2974)
+texture = ExtResource("6_y5ilw")
+
+[node name="Arbol-Final" type="StaticBody2D" parent="Extra-Tiles"]
+modulate = Color(0.0117647, 0.196078, 0.843137, 1)
+z_index = 5
+position = Vector2(7225.28, -152.176)
+
+[node name="Sprite2D" type="Sprite2D" parent="Extra-Tiles/Arbol-Final"]
+position = Vector2(10.7158, -76.8242)
+scale = Vector2(1.80682, 1.80871)
+texture = ExtResource("5_pfvlw")
+region_enabled = true
+region_rect = Rect2(554.3, 1.70001, 220, 264)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Extra-Tiles/Arbol-Final"]
+position = Vector2(22.7158, -22.8242)
+shape = SubResource("RectangleShape2D_ve4wq")
+
+[node name="Player" parent="." instance=ExtResource("6_7nugv")]
+z_index = 5
+position = Vector2(352, -98)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+limit_bottom = 70
+
+[node name="AreaOfSightAgent2D" parent="Player" instance=ExtResource("9_ycyqt")]
+position = Vector2(-6, -124)
+
+[node name="AreaOfSight2D" parent="Player/AreaOfSightAgent2D" index="0"]
+position = Vector2(35, -3)
+angle_deg = 55
+obstacle_mask = 255
+tracking_agents_mask = 255
+area_color = Color(1, 1, 1, 0.192157)
+
+[node name="Killzone" parent="." instance=ExtResource("9_mc2n5")]
+position = Vector2(-565, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(42, 12)
+shape = SubResource("WorldBoundaryShape2D_ucvvj")
+
+[node name="HUD - Game_Manager" parent="." instance=ExtResource("10_32ydk")]
+is_lvl2_running = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
+
+[node name="Pause_Menu" parent="CanvasLayer" instance=ExtResource("11_jv0te")]
+visible = false
+
+[node name="Ecoficha" type="Node" parent="."]
+
+[node name="EcoFicha" parent="Ecoficha" instance=ExtResource("12_04xp0")]
+position = Vector2(1976, -101)
+
+[node name="EcoFicha2" parent="Ecoficha" instance=ExtResource("12_04xp0")]
+position = Vector2(4328, -98)
+
+[node name="EcoFicha3" parent="Ecoficha" instance=ExtResource("12_04xp0")]
+position = Vector2(2888, -94)
+
+[node name="EcoFicha4" parent="Ecoficha" instance=ExtResource("12_04xp0")]
+position = Vector2(4437, -96)
+
+[node name="EcoFicha5" parent="Ecoficha" instance=ExtResource("12_04xp0")]
+position = Vector2(4842, -79)
+
+[node name="EcoFicha6" parent="Ecoficha" instance=ExtResource("12_04xp0")]
+position = Vector2(7059, -96)
+
+[node name="EcoFicha7" parent="Ecoficha" instance=ExtResource("12_04xp0")]
+position = Vector2(5052, -83)
+
+[node name="EcoFicha8" parent="Ecoficha" instance=ExtResource("12_04xp0")]
+position = Vector2(6061, -208)
+
+[node name="Plataformas" type="Node" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas"]
+libraries = {
+&"": SubResource("AnimationLibrary_olts8")
+}
+autoplay = "move"
+
+[node name="Plataforma" parent="Plataformas" instance=ExtResource("13_f4mcg")]
+modulate = Color(0.0117647, 0.196078, 0.843137, 1)
+position = Vector2(923, -108)
+
+[node name="Rio Largo" type="Node" parent="Plataformas"]
+
+[node name="Plataforma2" parent="Plataformas/Rio Largo" instance=ExtResource("13_f4mcg")]
+modulate = Color(0.0117647, 0.196078, 0.843137, 1)
+position = Vector2(3094, -108)
+
+[node name="Plataforma3" parent="Plataformas/Rio Largo" instance=ExtResource("13_f4mcg")]
+modulate = Color(0.0117647, 0.196078, 0.843137, 1)
+position = Vector2(5317, -137)
+
+[node name="Label" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = 504.0
+offset_top = -328.0
+offset_right = 829.0
+offset_bottom = -278.0
+text = "R1 - Linterna"
+label_settings = SubResource("LabelSettings_sssuk")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Label"]
+modulate = Color(1, 1, 1, 0)
+offset_left = 381.0
+offset_top = -333.0
+offset_right = 773.0
+offset_bottom = -310.0
+theme = SubResource("Theme_nv43g")
+theme_override_fonts/font = ExtResource("15_eu6hk")
+theme_override_font_sizes/font_size = 15
+text = "Pulsa RB / R1  para encender la Linterna"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label/Label2"]
+libraries = {
+&"": SubResource("AnimationLibrary_11xp4")
+}
+
+[node name="Enemy" parent="." instance=ExtResource("14_v4gn0")]
+modulate = Color(0.313581, 0.517566, 0.986765, 1)
+position = Vector2(2470, -100)
+
+[editable path="Player"]
+[editable path="Player/AreaOfSightAgent2D"]

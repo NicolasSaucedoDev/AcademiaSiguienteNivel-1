@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://cummftgtaxa1b"
+path="res://.godot/imported/EcoFicha.dialogue-444a8c028ca91a7c51809e2fcaa9a014.tres"
+
+[deps]
+
+source_file="res://Dialogos/EcoFicha.dialogue"
+dest_files=["res://.godot/imported/EcoFicha.dialogue-444a8c028ca91a7c51809e2fcaa9a014.tres"]
+
+[params]
+
+defaults=true

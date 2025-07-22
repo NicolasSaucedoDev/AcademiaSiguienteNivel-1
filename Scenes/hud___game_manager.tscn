@@ -1,0 +1,531 @@
+[gd_scene load_steps=41 format=3 uid="uid://07xvf25kavmx"]
+
+[ext_resource type="Script" uid="uid://c2ue3cbymsrgw" path="res://Script/hud___game_manager.gd" id="1_3p8fa"]
+[ext_resource type="Texture2D" uid="uid://djm770g38kobr" path="res://Assets/TileMap/ARBOLESCEIBOYTOTEMS.png" id="1_hckva"]
+[ext_resource type="FontFile" uid="uid://bx12juymqvp26" path="res://Assets/fonts/PixelOperator8.ttf" id="3_d2pmk"]
+[ext_resource type="Texture2D" uid="uid://mtxlxhdogdvr" path="res://Assets/Coleccionables/monedaecoparquesola.png" id="4_3t3ar"]
+[ext_resource type="Texture2D" uid="uid://cn3lgeusb84o4" path="res://Assets/Diseño/MENU PAUSA 2-02.png" id="6_7q8ib"]
+[ext_resource type="Script" uid="uid://dy087bsgeun5" path="res://Script/game_over.gd" id="6_ssq50"]
+[ext_resource type="FontFile" uid="uid://cubrusvlt8qcq" path="res://Assets/fonts/Dosis-ExtraBold.otf" id="7_7pt1v"]
+[ext_resource type="Script" uid="uid://5iypixqfwfom" path="res://Script/next_level.gd" id="7_huinm"]
+[ext_resource type="Theme" uid="uid://d2nlewj6nm02h" path="res://preload/Pause_MenuButton.tres" id="8_fbj38"]
+[ext_resource type="FontFile" uid="uid://b6i34ku0fvv0o" path="res://Assets/fonts/Dosis-Bold.otf" id="9_hfhx7"]
+[ext_resource type="Script" uid="uid://slldm3iv84bk" path="res://Script/siguiente_nivel.gd" id="10_mg4wt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7x1g2"]
+font = ExtResource("3_d2pmk")
+font_size = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wxwgm"]
+texture = ExtResource("6_7q8ib")
+region_rect = Rect2(940.11, 1486.82, 156.922, 31.3843)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mipdf"]
+font = ExtResource("7_7pt1v")
+font_size = 50
+font_color = Color(1, 1, 0, 1)
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_ju7g8"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_0qluh"]
+events = [SubResource("InputEventJoypadButton_ju7g8")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_kua7b"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_gqdde"]
+events = [SubResource("InputEventJoypadButton_kua7b")]
+
+[sub_resource type="Animation" id="Animation_c43jx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Siguiente_Nivel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_c853k"]
+resource_name = "animation"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Siguiente_Nivel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"onlost"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dwms2"]
+_data = {
+&"RESET": SubResource("Animation_c43jx"),
+&"animation": SubResource("Animation_c853k")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u6hry"]
+texture = ExtResource("6_7q8ib")
+region_rect = Rect2(1118, 1484.5, 130, 78)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vxpyl"]
+font = ExtResource("9_hfhx7")
+font_size = 36
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_msrh0"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_n060g"]
+events = [SubResource("InputEventJoypadButton_msrh0")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_ml2wq"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_sumvt"]
+events = [SubResource("InputEventJoypadButton_ml2wq")]
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_n3vp0"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_i3a4t"]
+events = [SubResource("InputEventJoypadButton_n3vp0")]
+
+[sub_resource type="Animation" id="Animation_81dor"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Siguiente_Nivel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Game_Over:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_42qxn"]
+resource_local_to_scene = true
+resource_name = "siguienteNivel"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Next_level")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_trkib"]
+_data = {
+&"RESET": SubResource("Animation_81dor"),
+&"siguienteNivel": SubResource("Animation_42qxn")
+}
+
+[sub_resource type="Theme" id="Theme_etfbp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbjst"]
+texture = ExtResource("6_7q8ib")
+region_rect = Rect2(1190, 1510, 43, 21)
+
+[sub_resource type="LabelSettings" id="LabelSettings_iu6py"]
+font = ExtResource("3_d2pmk")
+font_size = 24
+
+[sub_resource type="InputEventJoypadButton" id="InputEventJoypadButton_k552j"]
+pressed = true
+
+[sub_resource type="Shortcut" id="Shortcut_q1wo6"]
+events = [SubResource("InputEventJoypadButton_k552j")]
+
+[sub_resource type="Animation" id="Animation_hwf1x"]
+resource_name = "Final"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel/Button")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"grab_focus"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_q5lq6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5c4oc"]
+_data = {
+&"Final": SubResource("Animation_hwf1x"),
+&"RESET": SubResource("Animation_q5lq6")
+}
+
+[node name="HUD - Game_Manager" type="CanvasLayer"]
+script = ExtResource("1_3p8fa")
+
+[node name="Ceibo-1" type="Sprite2D" parent="."]
+position = Vector2(50, 54)
+scale = Vector2(0.371183, 0.318308)
+texture = ExtResource("1_hckva")
+region_enabled = true
+region_rect = Rect2(0.900002, -2.1, 262.9, 269.5)
+
+[node name="Ceibo-2" type="Sprite2D" parent="."]
+position = Vector2(148, 54)
+scale = Vector2(0.37834, 0.309712)
+texture = ExtResource("1_hckva")
+region_enabled = true
+region_rect = Rect2(0.900002, -2.1, 262.9, 269.5)
+
+[node name="Ceibo-3" type="Sprite2D" parent="."]
+position = Vector2(248, 54)
+scale = Vector2(0.382156, 0.335734)
+texture = ExtResource("1_hckva")
+region_enabled = true
+region_rect = Rect2(0.900002, -2.1, 262.9, 269.5)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 981.0
+offset_top = 41.0
+offset_right = 1061.0
+offset_bottom = 114.0
+text = "0
+"
+label_settings = SubResource("LabelSettings_7x1g2")
+
+[node name="EcoFicha" type="Sprite2D" parent="."]
+position = Vector2(1084, 63)
+scale = Vector2(0.830015, 0.81937)
+texture = ExtResource("4_3t3ar")
+
+[node name="Game_Over" type="Control" parent="."]
+process_mode = 3
+visible = false
+z_index = 20
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_ssq50")
+
+[node name="PanelContainer" type="PanelContainer" parent="Game_Over"]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -232.0
+offset_top = 100.0
+offset_right = 233.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_wxwgm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Game_Over/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 60
+
+[node name="Label" type="Label" parent="Game_Over/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_mipdf")
+
+[node name="Restart" type="Button" parent="Game_Over/PanelContainer/VBoxContainer" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 3
+z_index = 5
+layout_mode = 2
+focus_mode = 0
+shortcut_context = NodePath(".")
+theme = ExtResource("8_fbj38")
+theme_override_fonts/font = ExtResource("9_hfhx7")
+theme_override_font_sizes/font_size = 40
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_0qluh")
+text = "Restart"
+
+[node name="Exit_Game" type="Button" parent="Game_Over/PanelContainer/VBoxContainer" node_paths=PackedStringArray("shortcut_context")]
+process_mode = 3
+z_index = 5
+layout_mode = 2
+shortcut_context = NodePath(".")
+theme = ExtResource("8_fbj38")
+theme_override_fonts/font = ExtResource("9_hfhx7")
+theme_override_font_sizes/font_size = 40
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_gqdde")
+text = "Exit Game
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Game_Over"]
+libraries = {
+"": SubResource("AnimationLibrary_dwms2")
+}
+
+[node name="win" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_huinm")
+
+[node name="Panel" type="Panel" parent="win"]
+layout_mode = 0
+offset_left = 392.0
+offset_top = 64.0
+offset_right = 768.0
+offset_bottom = 576.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_u6hry")
+
+[node name="Label" type="Label" parent="win/Panel"]
+layout_mode = 0
+offset_left = -8.0
+offset_right = 376.0
+offset_bottom = 128.0
+text = "Has completado el nivel"
+label_settings = SubResource("LabelSettings_vxpyl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next_level" type="Button" parent="win/Panel" node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 128.0
+offset_right = 312.0
+offset_bottom = 192.0
+shortcut_context = NodePath(".")
+theme = ExtResource("8_fbj38")
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_n060g")
+text = "Siguiente Nivel
+"
+
+[node name="Reiniciar" type="Button" parent="win/Panel" node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 256.0
+offset_right = 303.0
+offset_bottom = 320.0
+shortcut_context = NodePath(".")
+theme = ExtResource("8_fbj38")
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_sumvt")
+text = "Reiniciar"
+
+[node name="Salir" type="Button" parent="win/Panel" node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 384.0
+offset_right = 312.0
+offset_bottom = 448.0
+shortcut_context = NodePath(".")
+theme = ExtResource("8_fbj38")
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_i3a4t")
+text = "Salir
+"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="win"]
+libraries = {
+"": SubResource("AnimationLibrary_trkib")
+}
+
+[node name="Siguiente_Nivel" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_etfbp")
+script = ExtResource("10_mg4wt")
+
+[node name="Panel" type="Panel" parent="Siguiente_Nivel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -320.0
+offset_top = -260.0
+offset_right = 256.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lbjst")
+
+[node name="Label" type="Label" parent="Siguiente_Nivel/Panel"]
+modulate = Color(1, 1, 0, 1)
+layout_mode = 2
+offset_right = 576.0
+offset_bottom = 128.0
+size_flags_horizontal = 4
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("9_hfhx7")
+theme_override_font_sizes/font_size = 40
+text = "Felicidades
+
+Has Completado el Juego"
+label_settings = SubResource("LabelSettings_iu6py")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Siguiente_Nivel/Panel" node_paths=PackedStringArray("shortcut_context")]
+layout_mode = 2
+offset_left = 64.0
+offset_top = 320.0
+offset_right = 512.0
+offset_bottom = 384.0
+shortcut_context = NodePath(".")
+theme = ExtResource("8_fbj38")
+theme_override_fonts/font = ExtResource("9_hfhx7")
+theme_override_font_sizes/font_size = 30
+toggle_mode = true
+action_mode = 0
+shortcut = SubResource("Shortcut_q1wo6")
+text = "¿Fin?"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Siguiente_Nivel"]
+libraries = {
+"": SubResource("AnimationLibrary_5c4oc")
+}
+
+[connection signal="pressed" from="Game_Over/PanelContainer/VBoxContainer/Restart" to="Game_Over" method="_on_restart_pressed"]
+[connection signal="pressed" from="Game_Over/PanelContainer/VBoxContainer/Exit_Game" to="Game_Over" method="_on_exit_game_pressed"]
+[connection signal="animation_finished" from="Game_Over/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="win/Panel/Next_level" to="win" method="_on_next_level_pressed"]
+[connection signal="pressed" from="win/Panel/Reiniciar" to="win" method="_on_reiniciar_pressed"]
+[connection signal="pressed" from="win/Panel/Salir" to="win" method="_on_salir_pressed"]
+[connection signal="pressed" from="Siguiente_Nivel/Panel/Button" to="Siguiente_Nivel" method="_on_button_pressed"]
